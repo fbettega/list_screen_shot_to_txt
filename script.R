@@ -1,0 +1,5 @@
+library(tesseract)
+eng <- tesseract("eng")
+img = magick::image_read("https://pbs.twimg.com/media/F2RNttka0AAs5qq.jpg")
+text <- tesseract::ocr(img, engine = eng)
+cat(text)
